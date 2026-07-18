@@ -42,6 +42,11 @@ Coco combines the power of **Google Gemini AI**, **OpenStreetMap**, **OSRM**, an
 | 📂 GitHub Repository | https://github.com/JasmankaurBal/coco-trip-planner |
 
 ---
+## 📋 Project Evolution
+
+Coco – The Trip Planner has undergone significant redesigns and feature enhancements since its initial inspiration.
+
+For a detailed overview of all major modifications, improvements, and future development plans, please see **[CHANGES.md](./CHANGES.md)**.
 
 # ❓ Why Coco?
 

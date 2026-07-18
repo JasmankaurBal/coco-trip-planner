@@ -1,290 +1,433 @@
-# AI Trip Planner
+# 🐶 Coco – The Trip Planner
 
-![Stack](https://img.shields.io/badge/Stack-MERN-green) ![AI](https://img.shields.io/badge/AI-Google%20Gemini-orange) ![Maps](https://img.shields.io/badge/Maps-OpenStreetMap-blue) ![Routing](https://img.shields.io/badge/Routing-OSRM-purple) ![Auth](https://img.shields.io/badge/Auth-JWT-red) ![Deployment](https://img.shields.io/badge/Deployment-Vercel%20%7C%20Render-black) ![License](https://img.shields.io/badge/License-MIT-yellow)
+<p align="center">
+  <h3 align="center">Plan Less. Explore More. Travel with Coco.</h3>
+  <p align="center">
+    An AI-powered travel companion that creates personalized itineraries, discovers nearby attractions, and helps you explore the world with confidence.
+  </p>
+</p>
 
-**AI Trip Planner** is a full-stack MERN application that uses AI-assisted reasoning and free, open-source mapping services to generate intelligent travel itineraries in real time.
-
-The system focuses on practical integration, scalability, and user-centric planning with **zero paid API dependencies** for core functionality.
-
----
-
-## TL;DR
-
-AI Trip Planner combines **Google Gemini AI**, **OpenStreetMap**, and **OSRM routing** to create personalized travel plans with live location data, secure authentication, and a production-ready MERN architecture—**all using free, open-source services**.
-
----
-
-## Links
-
-- **Live Application**: [https://trips-planner-blue.vercel.app/](https://trips-planner-blue.vercel.app/)
-- **Video Demo**: [https://youtu.be/2isgUskJNqY](https://youtu.be/2isgUskJNqY)
-- **Portfolio**: [https://harshlad.vercel.app/](https://harshlad.vercel.app/)
+![MERN](https://img.shields.io/badge/Stack-MERN-green)
+![AI](https://img.shields.io/badge/AI-Google%20Gemini-orange)
+![Maps](https://img.shields.io/badge/Maps-OpenStreetMap-blue)
+![Routing](https://img.shields.io/badge/Routing-OSRM-purple)
+![Authentication](https://img.shields.io/badge/Auth-JWT-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-## Problem Statement
+## 🌍 About Coco
 
-Most travel planning platforms suffer from:
+**Coco – The Trip Planner** is a modern AI-powered travel planning platform built using the MERN stack. It helps travelers generate personalized travel itineraries, discover nearby attractions, estimate budgets, and navigate destinations using free and open-source mapping services.
 
-- **Static, non-personalized itineraries** that don't adapt to user preferences
-- **Expensive API dependencies** that limit accessibility
-- **Poor integration** between planning, navigation, and location discovery
-- **No AI-driven reasoning** for trip optimization
-- **Fragmented user experience** across multiple platforms
+Unlike traditional trip planners, Coco focuses on delivering an interactive and personalized planning experience by combining **Google Gemini AI**, **OpenStreetMap**, and intelligent travel recommendations into one seamless platform.
 
-Users are forced to manually coordinate between multiple tools for maps, planning, and navigation.
+Whether you're planning a weekend getaway or a long vacation, Coco acts as your digital travel companion from start to finish.
 
 ---
 
-## Solution Overview
+# 🚀 TL;DR
 
-AI Trip Planner solves this by acting as a **centralized, intelligent planning system** that:
-
-- **Generates AI-powered itineraries** based on user preferences using Google Gemini AI
-- **Integrates free location services** via OpenStreetMap, Nominatim, and Overpass API
-- **Provides real-time routing** using OSRM (Open Source Routing Machine)
-- **Supports secure authentication** with JWT dual-token system
-- **Maintains a scalable MERN backend** for future expansion
-
-The application is designed for **real-world usability**, not just demo output.
+Coco combines the power of **Google Gemini AI**, **OpenStreetMap**, **OSRM**, and the **MERN Stack** to generate intelligent travel itineraries, discover nearby places, optimize routes, and provide a secure, responsive travel planning experience—all while relying primarily on free and open-source services.
 
 ---
 
-## Core Features
+# 🔗 Project Links
 
-### AI-Powered Trip Planning
-
-- **Personalized itinerary generation** using Google Gemini AI
-- **Destination-based activity suggestions** with timing and cost estimates
-- **Day-wise structured planning** with activities, meals, and transportation
-- **Preference-aware optimization** (budget, duration, interests, travel style)
-- **Multi-day support** (1-30+ days)
-- **Cost breakdown** for each activity and day
-
-### Location & Navigation (100% Free Services)
-
-- **OpenStreetMap integration** for live location tracking
-- **Nominatim geocoding** for address-to-coordinates conversion
-- **Overpass API** for nearby places discovery (restaurants, attractions, parks, etc.)
-- **OSRM routing** for directions and route optimization
-- **Map-based UX** for trip exploration and planning
-- **Saved locations** for favorite destinations
-
-### User System
-
-- **Secure JWT-based authentication** with dual-token system
-  - Access tokens (15 minutes)
-  - Refresh tokens (7 days, HTTP-only cookies)
-- **Persistent login** with "Remember Me" functionality
-- **Account security features**:
-  - Password hashing with bcrypt (14 rounds)
-  - Account lockout after 5 failed attempts
-  - Rate limiting on sensitive endpoints
-- **User dashboard** for:
-  - Saved trips
-  - Trip history
-  - User preferences
-  - Profile management
-
-### Modern User Interface
-
-- **Responsive design** optimized for desktop, tablet, and mobile
-- **Smooth animations** powered by Framer Motion
-- **Interactive components**: Dynamic forms, modals, tooltips, notifications
-- **Real-time updates** via Socket.IO
-- **PDF export** for trip itineraries (planned)
-- **Clean, intuitive UX** with Tailwind CSS
+| Resource | Status |
+|----------|--------|
+| 🌐 Live Demo | Coming Soon |
+| 🎥 Demo Video | Coming Soon |
+| 💼 Portfolio | Coming Soon |
+| 📂 GitHub Repository | https://github.com/JasmankaurBal/coco-trip-planner |
 
 ---
 
-## System Architecture
+# ❓ Why Coco?
 
-### Frontend Architecture
+Planning a trip usually requires switching between multiple applications for itinerary planning, maps, navigation, weather, budgeting, and location discovery.
 
+This often leads to:
+
+- Manual trip planning
+- Generic travel recommendations
+- Time-consuming route management
+- Poor trip organization
+- Limited personalization
+- Scattered travel information across different platforms
+
+Coco aims to simplify this entire process by bringing everything together into one intelligent travel assistant.
+
+---
+
+# 💡 Solution
+
+Coco provides a centralized AI-powered travel planning experience by combining intelligent itinerary generation with interactive maps and secure user management.
+
+The platform enables users to:
+
+- 🤖 Generate personalized travel itineraries using Google Gemini AI.
+- 🗺 Discover nearby attractions using OpenStreetMap services.
+- 📍 Search locations with Nominatim.
+- 🚗 Find optimized travel routes using OSRM.
+- ❤️ Save favorite trips and destinations.
+- 🔐 Manage trips securely using JWT Authentication.
+- 📊 Organize travel history from a personal dashboard.
+- 📱 Access the application seamlessly across desktop and mobile devices.
+
+Coco is designed with scalability, performance, and user experience in mind while minimizing dependency on paid third-party APIs.
+
+---
+
+# ✨ Core Features
+
+## 🤖 AI Travel Planning
+
+- AI-generated personalized travel itineraries
+- Smart destination recommendations
+- Day-wise activity planning
+- Budget estimation
+- Travel preference customization
+- Multi-day itinerary generation
+- Intelligent schedule optimization
+
+---
+
+## 🗺 Maps & Navigation
+
+- Interactive OpenStreetMap integration
+- Live destination search
+- Nearby attractions discovery
+- Route optimization using OSRM
+- Geocoding and reverse geocoding
+- Saved favorite locations
+- Interactive map experience
+
+---
+
+## 👤 User Management
+
+- Secure JWT Authentication
+- Google Sign-In
+- User Registration & Login
+- Protected Routes
+- Persistent Sessions
+- Password Encryption
+- Personal Dashboard
+- Saved Trips
+- User Profile Management
+
+---
+
+## 🎨 Modern User Experience
+
+- Responsive MERN application
+- Beautiful animations using Framer Motion
+- Interactive travel dashboard
+- Mobile-first responsive design
+- Modern Tailwind CSS interface
+- Smooth navigation experience
+- Clean and minimal UI
+- Fast loading performance
+
+## 👤 User Authentication & Security
+
+Coco prioritizes user privacy and account security by implementing modern authentication practices.
+
+### Authentication Features
+
+- 🔐 Secure JWT-based Authentication
+- 🌐 Google Sign-In Integration
+- 👤 User Registration & Login
+- 🔄 Access & Refresh Token System
+- 💾 Persistent Login ("Remember Me")
+- 🔑 Password Encryption using bcrypt
+- 🛡️ Protected Routes & API Endpoints
+- 🚫 Rate Limiting against brute-force attacks
+- ⚠️ Account Lockout after multiple failed login attempts
+- 🍪 Secure HTTP-only Refresh Tokens
+
+### User Dashboard
+
+Each registered user gets a personalized dashboard to:
+
+- ❤️ Save favorite trips
+- 🧳 View travel history
+- ⚙️ Manage profile information
+- 📍 Store preferred destinations
+- 📅 Access previously generated itineraries
+
+---
+
+# 🎨 User Experience
+
+Coco is designed with a modern, responsive, and interactive interface to provide an enjoyable travel planning experience across all devices.
+
+### Highlights
+
+- 📱 Fully Responsive Design
+- ✨ Smooth Page Transitions
+- 🎭 Beautiful Animations using Framer Motion
+- 🌈 Modern UI built with Tailwind CSS
+- ⚡ Fast Loading Components
+- 🔔 Interactive Alerts & Notifications
+- 🗺️ Interactive Maps
+- 🎯 Clean and User-Friendly Navigation
+
+---
+
+# 🏗️ System Architecture
+
+## Frontend
+
+```text
+React Application
+│
+├── React 18
+├── React Router
+├── Tailwind CSS
+├── Framer Motion
+├── React Query
+├── React Hook Form
+├── Axios
+├── Context API
+└── Leaflet Maps
 ```
-React SPA
-├── Component-based UI (modular, reusable)
-├── Tailwind CSS (responsive styling)
-├── Framer Motion (smooth transitions)
-├── React Router (client-side routing)
-├── React Query (data fetching & caching)
-├── Context API (global state management)
-└── Axios (HTTP client with interceptors)
-```
 
-### Backend Architecture
+## Backend
 
-```
-Node.js + Express REST API
-├── MongoDB + Mongoose (data persistence)
-├── JWT Authentication (dual-token system)
-├── Socket.IO (real-time communication)
-├── Winston (structured logging)
-├── Helmet + CORS (security)
-├── Rate Limiting (abuse prevention)
-└── Modular route & service layers
+```text
+Node.js + Express API
+│
+├── REST APIs
+├── MongoDB Atlas
+├── Mongoose ODM
+├── JWT Authentication
+├── Google Gemini Integration
+├── OpenStreetMap Services
+├── Rate Limiting
+├── Helmet Security
+├── Winston Logging
+└── Socket.IO
 ```
 
 ---
 
-## Tech Stack
+# 💻 Tech Stack
 
-### Frontend
+## Frontend
 
-| Technology | Purpose |
-|-----------|---------|
-| **React 18** | UI framework with hooks and context |
-| **React Router v6** | Client-side routing |
-| **Tailwind CSS** | Utility-first styling |
-| **Framer Motion** | Smooth animations |
-| **React Query (TanStack)** | Data fetching & caching |
-| **React Hook Form** | Form handling with validation |
-| **Axios** | HTTP client |
-| **Socket.IO Client** | Real-time communication |
-| **React Icons** | Icon library |
-| **React Leaflet** | Interactive maps (OpenStreetMap) |
-| **Chart.js** | Data visualization |
-
-### Backend
-
-| Technology | Purpose |
-|-----------|---------|
-| **Node.js** | JavaScript runtime |
-| **Express.js** | Web framework |
-| **MongoDB** | NoSQL database |
-| **Mongoose** | MongoDB ODM |
-| **JWT** | Secure authentication |
-| **bcryptjs** | Password hashing |
-| **Socket.IO** | Real-time communication |
-| **Winston** | Advanced logging |
-| **Helmet** | Security headers |
-| **Express Validator** | Input validation |
-| **Compression** | Response compression |
-
-### External Services (All Free)
-
-| Service | Purpose | Cost |
-|---------|---------|------|
-| **Google Gemini AI** | AI itinerary generation | FREE (60 req/min) |
-| **OpenStreetMap** | Map tiles and data | FREE |
-| **Nominatim** | Geocoding | FREE |
-| **Overpass API** | POI search | FREE |
-| **OSRM** | Routing & directions | FREE |
+| Technology | Usage |
+|------------|---------------------------|
+| React 18 | User Interface |
+| React Router | Client-side Routing |
+| Tailwind CSS | Styling |
+| Framer Motion | Animations |
+| React Query | Data Fetching & Caching |
+| React Hook Form | Form Validation |
+| Axios | API Communication |
+| React Leaflet | Interactive Maps |
+| React Icons | Icons |
+| Chart.js | Analytics & Visualizations |
 
 ---
 
-## Project Structure
+## Backend
 
-```
-AI-TripPlanner/
-├── client/                          # React Frontend
+| Technology | Usage |
+|------------|---------------------------|
+| Node.js | Runtime Environment |
+| Express.js | REST API Development |
+| MongoDB Atlas | Cloud Database |
+| Mongoose | Database ODM |
+| JWT | Authentication |
+| bcrypt | Password Encryption |
+| Helmet | Security Middleware |
+| Express Validator | Request Validation |
+| Winston | Logging |
+| Socket.IO | Real-time Communication |
+| Compression | Performance Optimization |
+
+---
+
+## 🤖 AI & External Services
+
+Coco integrates powerful AI models and free open-source mapping services to provide intelligent trip planning without relying on expensive third-party APIs.
+
+| Service | Purpose |
+|----------|---------|
+| 🤖 Google Gemini AI | Personalized itinerary generation & travel recommendations |
+| 🗺️ OpenStreetMap | Interactive maps and location data |
+| 📍 Nominatim API | Geocoding & reverse geocoding |
+| 🏞️ Overpass API | Nearby attractions, restaurants & points of interest |
+| 🚗 OSRM | Route planning & navigation |
+
+> 💡 **Why these services?**
+>
+> Coco is designed around free and open technologies, making it affordable, scalable, and developer-friendly.
+
+---
+
+# 📂 Project Structure
+
+```text
+coco-trip-planner/
+│
+├── client/
 │   ├── public/
-│   │   ├── index.html              # HTML template
-│   │   └── manifest.json           # PWA manifest
 │   ├── src/
-│   │   ├── components/             # Reusable UI components
-│   │   │   ├── auth/              # Login, Register, ProtectedRoute
-│   │   │   ├── common/            # Button, Input, Modal, Card
-│   │   │   ├── layout/            # Header, Footer, Sidebar
-│   │   │   ├── maps/              # Map components (Leaflet)
-│   │   │   └── trip/              # Trip cards, detail views
-│   │   ├── contexts/              # React Context
-│   │   │   ├── AuthContext.js    # Authentication state
-│   │   │   └── NotificationContext.js  # Real-time notifications
-│   │   ├── hooks/                 # Custom hooks
-│   │   ├── pages/                 # Application pages
-│   │   │   ├── Home.js           # Landing page
-│   │   │   ├── Dashboard.js      # User dashboard
-│   │   │   ├── TripPlanner.js    # AI trip planning
-│   │   │   ├── TripDetail.js     # Trip detail view
-│   │   │   ├── Maps.js           # Interactive maps
-│   │   │   ├── Trips.js          # Trip list
-│   │   │   ├── Profile.js        # User profile
-│   │   │   └── auth/             # Login, Register
-│   │   ├── services/              # API layer
-│   │   │   └── api.js            # Axios config & endpoints
-│   │   ├── App.js                # Main app component
-│   │   ├── index.js              # React entry point
-│   │   └── index.css             # Global styles
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   ├── auth/
+│   │   │   ├── common/
+│   │   │   ├── layout/
+│   │   │   ├── maps/
+│   │   │   └── trip/
+│   │   ├── contexts/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   ├── App.js
+│   │   └── index.js
 │   └── package.json
 │
-├── server/                          # Node.js Backend
-│   ├── controllers/                # Route controllers
-│   │   ├── aiController.js        # AI itinerary generation
-│   │   ├── authControllerNew.js   # Authentication logic
-│   │   ├── mapsController.js      # Maps & location services
-│   │   └── tripController.js      # Trip CRUD operations
-│   ├── middleware/                 # Express middleware
-│   │   ├── auth.js               # JWT authentication
-│   │   ├── logging.js            # Winston logger
-│   │   └── security.js           # Security headers & rate limiting
-│   ├── models/                     # Mongoose schemas
-│   │   ├── User.js               # User model
-│   │   └── Trip.js               # Trip model
-│   ├── routes/                     # Express routes
-│   │   ├── ai.js                 # AI endpoints
-│   │   ├── authNew.js            # Auth endpoints
-│   │   ├── maps.js               # Maps endpoints
-│   │   ├── trips.js              # Trip endpoints
-│   │   └── users.js              # User endpoints
-│   ├── services/                   # External integrations
-│   │   ├── geminiService.js      # Google Gemini AI
-│   │   └── freeMapService.js     # OSM, Nominatim, OSRM
-│   ├── utils/                      # Utilities
-│   │   └── tokens.js             # JWT token management
-│   ├── server.js                  # Express app setup
-│   ├── .env.example              # Environment template
+├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── utils/
+│   ├── server.js
 │   └── package.json
 │
-├── .gitignore
-├── package.json                    # Root scripts
-└── README.md
+├── README.md
+├── package.json
+└── .gitignore
 ```
 
 ---
 
-## Setup & Installation
+# ⚙️ Installation
 
-### Prerequisites
+## Prerequisites
 
-- **Node.js** v14+ ([Download](https://nodejs.org/))
-- **MongoDB** (local or [MongoDB Atlas](https://www.mongodb.com/atlas))
-- **Git** ([Download](https://git-scm.com/))
+Before running the project, make sure you have installed:
 
-### Installation Steps
+- Node.js (v18 or later recommended)
+- MongoDB (Local or MongoDB Atlas)
+- Git
+- npm
+
+---
+
+## Clone Repository
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/ladHarsh/AI-TripPlanner.git
-cd AI-TripPlanner
+git clone https://github.com/JasmankaurBal/coco-trip-planner.git
 
-# 2. Install all dependencies
-npm run install-all
-
-# Or install manually:
-npm install                    # Root dependencies
-cd server && npm install       # Server dependencies
-cd ../client && npm install    # Client dependencies
+cd coco-trip-planner
 ```
 
-### Environment Configuration
+---
 
-Create `server/.env`:
+## Install Dependencies
+
+### Install Root Packages
+
+```bash
+npm install
+```
+
+### Install Frontend
+
+```bash
+cd client
+npm install
+```
+
+### Install Backend
+
+```bash
+cd ../server
+npm install
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file inside the **server** folder.
 
 ```env
-# Server Configuration
 PORT=5000
 NODE_ENV=development
 
 # Database
-MONGODB_URI=mongodb://localhost:27017/ai-trip-planner
-MONGODB_URI_PROD=your_mongodb_atlas_uri_here
+MONGODB_URI=your_mongodb_connection_string
 
-# JWT Secrets (Generate strong random strings)
-JWT_ACCESS_SECRET=your_super_secure_access_secret_min_32_chars
-JWT_REFRESH_SECRET=your_super_secure_refresh_secret_min_32_chars
+# JWT
+JWT_ACCESS_SECRET=your_access_secret
+JWT_REFRESH_SECRET=your_refresh_secret
 ACCESS_TOKEN_EXPIRY=15m
 REFRESH_TOKEN_EXPIRY=7d
+
+# Gemini AI
+GEMINI_API_KEY=your_gemini_api_key
+
+# Client URL
+CLIENT_URL=http://localhost:3000
+
+# CORS
+ALLOWED_ORIGINS=http://localhost:3000
+
+# Security
+BCRYPT_ROUNDS=14
+MAX_LOGIN_ATTEMPTS=5
+LOCKOUT_DURATION=900000
+```
+
+---
+
+## Environment Variables (Client)
+
+Create a `.env` file inside **client**.
+
+```env
+REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id
+```
+
+---
+
+## Getting API Keys
+
+### 🤖 Google Gemini AI
+
+1. Visit Google AI Studio.
+2. Create a new API key.
+3. Copy the generated key.
+4. Add it to:
+
+```env
+GEMINI_API_KEY=your_api_key
+```
+
+---
+
+### 🍃 MongoDB Atlas
+
+1. Create a free cluster.
+2. Create a database user.
+3. Whitelist your IP.
+4. Copy the connection string.
+5. Add it to:
+
+```env
+MONGODB_URI=your_connection_string
+```
 
 # Google Gemini AI (Required - FREE)
 GEMINI_API_KEY=your_gemini_api_key_here
@@ -309,240 +452,257 @@ Create `client/.env` (optional):
 REACT_APP_API_URL=http://localhost:5000/api
 ```
 
-### Get API Keys
+## 🚀 Running the Application
 
-#### Google Gemini AI (Required - FREE)
+### Start the Development Server
 
-1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Sign in with your Google account
-3. Click "Create API Key"
-4. Copy the key and add to `server/.env`: `GEMINI_API_KEY=your_key_here`
-5. **Free tier**: 60 requests/minute
-
-#### MongoDB Atlas (Recommended for Production)
-
-1. Visit [MongoDB Atlas](https://www.mongodb.com/atlas)
-2. Create a free M0 cluster
-3. Get your connection string
-4. Add to `server/.env`: `MONGODB_URI_PROD=mongodb+srv://...`
-5. **Important**: Add `0.0.0.0/0` to Network Access (or your server's IP)
-
----
-
-## Running the Application
-
-### Development Mode
-
-**Option 1: Run both frontend and backend simultaneously** (Recommended)
+Run both frontend and backend simultaneously:
 
 ```bash
-# From the root directory
 npm run dev
 ```
 
-**Option 2: Run separately**
+Or start them separately:
 
 ```bash
-# Terminal 1 - Backend
+# Backend
 cd server
 npm run dev
 
-# Terminal 2 - Frontend
+# Frontend
 cd client
 npm start
 ```
 
-**Access the application:**
+### Local URLs
 
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000/api
-- **Health Check**: http://localhost:5000/api/health
+| Service | URL |
+|----------|-----|
+| Frontend | http://localhost:3000 |
+| Backend API | http://localhost:5000/api |
 
-### Production Build
+---
 
-```bash
-# Build the client
-cd client
-npm run build
+# 📡 API Overview
 
-# Start the server
-cd ../server
-NODE_ENV=production npm start
+## Authentication
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/register` | Register a new user |
+| POST | `/api/auth/login` | Login |
+| POST | `/api/auth/google` | Google Authentication |
+| POST | `/api/auth/logout` | Logout |
+| GET | `/api/auth/me` | Get current user |
+
+---
+
+## AI Services
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/ai/generate-itinerary` | Generate AI itinerary |
+| POST | `/api/ai/travel-suggestions` | Travel recommendations |
+| POST | `/api/ai/optimize-itinerary` | Optimize existing itinerary |
+
+---
+
+## Trip Management
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/trips` | Fetch user trips |
+| POST | `/api/trips` | Create new trip |
+| GET | `/api/trips/:id` | View trip |
+| PUT | `/api/trips/:id` | Update trip |
+| DELETE | `/api/trips/:id` | Delete trip |
+
+---
+
+## Maps
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/maps/search` | Search locations |
+| GET | `/api/maps/nearby` | Nearby attractions |
+| GET | `/api/maps/directions` | Route planning |
+
+---
+
+# 🔒 Security
+
+Coco follows modern web security practices to protect user accounts and sensitive information.
+
+### Security Features
+
+- JWT Authentication
+- Google OAuth Authentication
+- Password Hashing with bcrypt
+- Refresh Token Authentication
+- Protected API Routes
+- Secure HTTP-only Cookies
+- Helmet Security Middleware
+- Rate Limiting
+- Input Validation
+- MongoDB Injection Protection
+- CORS Protection
+
+---
+
+# ☁️ Deployment
+
+The application can be deployed using any modern cloud platform.
+
+### Frontend
+
+- Vercel
+- Netlify
+
+### Backend
+
+- Render
+- Railway
+- VPS (Ubuntu)
+
+### Database
+
+- MongoDB Atlas
+
+After deployment, update:
+
+```env
+CLIENT_URL=https://your-domain.com
+REACT_APP_API_URL=https://your-api-url.com/api
 ```
 
 ---
 
-## API Endpoints
+# 📚 What I Learned
 
-### Authentication (`/api/auth`)
+Building Coco helped me gain practical experience in:
 
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| POST | `/register` | Register new user | No |
-| POST | `/login` | User login | No |
-| POST | `/refresh` | Refresh access token | No |
-| POST | `/logout` | User logout | Yes |
-| GET | `/me` | Get current user | Yes |
-| PUT | `/profile` | Update profile | Yes |
-| POST | `/change-password` | Change password | Yes |
-
-### AI Trip Planning (`/api/ai`)
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| POST | `/generate-itinerary` | Generate AI itinerary | Yes |
-| POST | `/optimize-itinerary` | Optimize itinerary | Yes |
-| POST | `/travel-suggestions` | Get suggestions | Yes |
-| GET | `/recommendations` | Get recommendations | Yes |
-
-### Trip Management (`/api/trips`)
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| GET | `/` | Get all user trips | Yes |
-| POST | `/` | Create new trip | Yes |
-| GET | `/:id` | Get trip by ID | Yes |
-| PUT | `/:id` | Update trip | Yes |
-| DELETE | `/:id` | Delete trip | Yes |
-| GET | `/stats` | Get trip statistics | Yes |
-
-### Maps & Location (`/api/maps`)
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| GET | `/places/nearby` | Get nearby places (OSM) | Yes |
-| GET | `/places/search` | Search places | Yes |
-| GET | `/directions` | Get directions (OSRM) | Yes |
-| GET | `/geocode` | Geocode address | Yes |
-| GET | `/reverse-geocode` | Reverse geocode | Yes |
-| POST | `/save-location` | Save location | Yes |
+- Building scalable MERN applications
+- Integrating Google Gemini AI
+- Google OAuth Authentication
+- MongoDB Atlas
+- REST API Development
+- JWT Authentication
+- OpenStreetMap Integration
+- Route Planning using OSRM
+- Secure Backend Development
+- Responsive UI Design
+- State Management in React
+- Full Stack Deployment
 
 ---
 
-## Security Features
+# 🚧 Current Limitations
 
-- **JWT Authentication** with dual-token system
-- **Password Hashing** with bcrypt (14 salt rounds)
-- **Account Lockout** after 5 failed login attempts
-- **Rate Limiting** on all endpoints
-- **Input Validation** with express-validator
-- **XSS Protection** with xss-clean
-- **CORS** configured for specific origins
-- **Helmet** for security headers
-- **MongoDB Sanitization** to prevent NoSQL injection
-- **HTTP-only Cookies** for refresh tokens
+- Flight booking is not available yet.
+- Hotel booking integration is planned.
+- Offline mode is under development.
+- Voice assistant is planned for future releases.
+- Some AI responses depend on prompt quality.
 
 ---
 
-## Deployment
+# 🚀 Future Roadmap
 
-### Frontend (Vercel)
-
-1. **Connect GitHub to Vercel**
-2. **Configure Build Settings**:
-   - **Root Directory**: `client`
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `build`
-3. **Environment Variables**:
-   - `REACT_APP_API_URL`: `https://your-backend.onrender.com/api`
-4. **Deploy** - Vercel auto-deploys on push to main
-
-### Backend (Render)
-
-1. **Create Web Service on Render**
-2. **Configure Settings**:
-   - **Root Directory**: `server`
-   - **Build Command**: `npm install`
-   - **Start Command**: `node server.js`
-3. **Environment Variables** (copy from `.env.example`):
-   ```
-   NODE_ENV=production
-   MONGODB_URI=your_mongodb_atlas_uri
-   JWT_ACCESS_SECRET=your_secret
-   JWT_REFRESH_SECRET=your_secret
-   GEMINI_API_KEY=your_key
-   ALLOWED_ORIGINS=https://your-vercel-app.vercel.app
-   CLIENT_URL=https://your-vercel-app.vercel.app
-   ```
-4. **Deploy** - Render auto-deploys on push
+- 🐶 Coco AI Voice Assistant
+- 🎙️ Voice-Based Trip Planning
+- 🌦️ Live Weather Forecast Integration
+- 💸 Expense & Budget Tracker
+- ✈️ Flight Price Comparison
+- 🏨 Hotel Recommendation Engine
+- 👥 Collaborative Group Trips
+- 📱 React Native Mobile Application
+- 🌍 Multi-language Support
+- 📶 Offline Travel Mode
+- 🧳 AI Packing Assistant
+- 📍 Real-Time Trip Tracking
+- 🐾 Interactive Coco Mascot Across the Website
 
 ---
 
-## Engineering Learnings
-
-- Integrating **multiple free APIs** (OSM, Nominatim, Overpass, OSRM) in a production system
-- Managing **AI latency** and implementing retry logic
-- Designing **scalable MERN architectures** with modular services
-- Handling **cross-origin authentication** (Vercel + Render)
-- Building **production-ready API layers** with proper error handling
-- Balancing **AI assistance** with deterministic logic
-- Implementing **dual-token JWT** authentication system
-- **Rate limiting** and security best practices
-
----
-
-## Known Limitations
-
-- No hotel booking integration (removed to avoid paid APIs)
-- No flight/train booking (removed to avoid paid APIs)
-- No collaborative trip planning (yet)
-- No offline mode
-- AI output quality depends on input clarity
-- Free API tiers impose rate limits (Nominatim: 1 req/sec)
-
----
-
-## Future Roadmap
-
-- Collaborative trip planning (multi-user)
-- Saved itinerary versioning
-- Advanced cost optimization
-- Mobile app (React Native)
-- Offline mode with PWA
-- Social sharing features
-- Multi-language support
-- Dark mode
-
----
-
-## License
+# 📄 License
 
 This project is licensed under the **MIT License**.
 
 ---
 
-## Author
+# 👩‍💻 Author
 
-**Harsh Lad**  
-Full Stack & AI Engineer
+## Jasmankaur Bal
 
-- **GitHub**: [@ladHarsh](https://github.com/ladHarsh)
-- **Portfolio**: [harshlad.vercel.app](https://harshlad.vercel.app/)
-- **Email**: harshlad.dev@gmail.com
+Frontend & Full Stack Developer
+
+Passionate about building AI-powered applications, modern web experiences, and intelligent travel solutions.
+
+**GitHub**
+
+https://github.com/JasmankaurBal
+
+**LinkedIn**
+
+https://linkedin.com/in/jasmankaurbal
+
+**Portfolio**
+
+Coming Soon
+
+---
+
+# 🙏 Acknowledgments
+
+Special thanks to **Harsh Lad** for open-sourcing the original AI Trip Planner project that inspired the foundation of this work.
+
+**Coco – The Trip Planner** has been significantly redesigned and extended with new branding, UI/UX improvements, Google Authentication, enhanced architecture, additional features, and continuous development by **Jasmankaur Bal**.
+
+The project also makes use of:
+
+- Google Gemini AI
+- OpenStreetMap
+- Nominatim API
+- Overpass API
+- OSRM
+- React Community
+- Node.js Community
+- MongoDB Atlas
 
 ---
 
-## Acknowledgments
+# 🤝 Contributing
 
-- **Google Gemini AI** for intelligent itinerary generation
-- **OpenStreetMap** for free, open-source mapping data
-- **Nominatim** for geocoding services
-- **OSRM** for routing and directions
-- **MongoDB** for flexible database solutions
-- **Vercel** & **Render** for free hosting
-- **React** and **Node.js** communities
+Contributions, feature requests, and suggestions are always welcome.
+
+If you find a bug or have an idea to improve Coco, feel free to fork the repository and submit a Pull Request.
 
 ---
 
-## Support
+# ⭐ Support
 
-If you encounter issues:
+If you like this project, consider giving it a ⭐ on GitHub.
 
-1. Check the [Issues](https://github.com/ladHarsh/AI-TripPlanner/issues) page
-2. Create a new issue with detailed information
-3. Contact: harshlad.dev@gmail.com
+It helps the project reach more developers and motivates future improvements.
 
 ---
+## 🙏 Acknowledgments
+
+This project was initially inspired by the open-source **AI Trip Planner** project created by **Harsh Lad** one of my classmate.
+
+**Coco – The Trip Planner** has since been significantly redesigned and extended by **Jasmankaur Bal**, including new branding, UI/UX improvements, Google Authentication, feature enhancements, architecture refinements, and ongoing development.
+
+Special thanks to Harsh Lad for making the original project publicly available.
+
+<p align="center">
+
+### 🐶 Coco – The Trip Planner
+
+*"Every journey becomes memorable when you have the right companion."*
+
+Built with ❤️ and 🐾 by **Jasmankaur Bal**
+
+</p>
 
 **AI Trip Planner** — Practical AI-assisted travel planning with real-world, free data.
 

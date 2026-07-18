@@ -1,0 +1,195 @@
+Coco is a premium travel-planning experience built as a full-stack MERN application with a warm, luxury-inspired brand identity.
+
+Project identity
+- App name: Coco
+- Tagline: The Trip Planner
+- Purpose: Help users plan trips with a calm, polished, and highly guided experience.
+
+Architecture summary
+- Frontend: React (Create React App) with Tailwind CSS, Framer Motion, React Router, Axios, React Hot Toast, React Icons.
+- Backend: Node.js + Express with MongoDB + Mongoose.
+- Auth: JWT-based authentication with bcrypt password hashing, Google OAuth integration, and protected routes.
+- Maps and planning: backend routes and controllers handle trip planning, map-related requests, and AI-assisted itinerary generation.
+
+Important setup notes
+- The frontend lives in client/ and is started with npm start.
+- The backend lives in server/ and is started with npm run dev.
+- Environment variables must be loaded from the server .env file using dotenv at the top of server/server.js.
+- MongoDB is expected to connect through Atlas in this project.
+
+How the app works
+1. The browser loads the React frontend.
+2. React screens call backend endpoints via Axios.
+3. Express routes delegate to controllers.
+4. Controllers interact with the MongoDB models.
+5. The response is sent back to the frontend and rendered in the UI.
+
+Auth / user flow
+- Users can register and log in via email/password or Google auth.
+- New signups receive a one-time verification code that is sent to the email address on file.
+- A dedicated verification screen guides users through email confirmation before they continue deeper into the app.
+- Authenticated users can create trips, review saved plans, view maps, and manage profile data.
+- Protected routes ensure only authenticated users can reach private screens.
+
+Rebrand and UI updates completed
+- Replaced the old AI Trip Planner brand language with Coco branding.
+- Reworked the home, login, registration, navbar, footer, planner header, and public metadata.
+- Introduced warmer color tones, softer spacing, and more refined copy to create a premium travel companion feel.
+
+Key files updated
+- client/src/pages/Home.js: public landing page rebrand and new hero copy.
+- client/src/pages/auth/Login.js: premium login screen styling and messaging.
+- client/src/pages/auth/Register.js: premium registration form styling and updated fields.
+- client/src/pages/auth/VerifyEmail.js: new verification screen for one-time email confirmation.
+- client/src/contexts/AuthContext.js: auth state now routes users to the verification step when required.
+- client/src/components/layout/Navbar.js: Coco-branded top navigation.
+- client/src/components/layout/Footer.js: refined footer messaging and brand identity.
+- client/src/pages/TripPlanner.js: planner header branding and supportive toast copy.
+- client/src/pages/Dashboard.js: dashboard action copy and layout messaging.
+- client/public/index.html: title and metadata updated.
+- client/public/manifest.json: app name and short name updated.
+- server/server.js: health endpoint message updated.
+- server/controllers/authControllerNew.js: registration/login now generate and send a verification code and expose verification endpoints.
+- server/routes/authNew.js: added protected endpoints for requesting and submitting verification codes.
+- server/models/User.js: added email verification fields to support the new auth flow.
+- understanding.txt: rewritten as development notes.
+
+Frameworks and tools used
+- React
+- React Router
+- Tailwind CSS
+- Framer Motion
+- Axios
+- React Hot Toast
+- React Icons
+- Express.js
+- MongoDB / Mongoose
+- JWT + bcrypt
+- Google OAuth
+
+Controllers
+   ↓
+Database
+```
+
+---
+
+# 7. Role of Express
+
+Express creates APIs like:
+
+```
+GET /api/trips
+POST /api/login
+PUT /api/profile
+DELETE /api/trip/5
+```
+
+React calls these APIs.
+
+---
+
+# 8. Role of Mongoose
+
+Mongoose sits between Express and MongoDB.
+
+Instead of writing raw MongoDB commands, you can do:
+
+```javascript
+const user = await User.findOne({ email });
+```
+
+instead of low-level database operations.
+
+---
+
+# 9. What each folder does
+
+```
+client/
+```
+
+➡️ Frontend (React)
+
+```
+server/
+```
+
+➡️ Backend (Node + Express)
+
+```
+models/
+```
+
+➡️ Database schemas
+
+```
+controllers/
+```
+
+➡️ Business logic
+
+```
+routes/
+```
+
+➡️ API endpoints
+
+```
+services/
+```
+
+➡️ AI, Maps, external APIs
+
+```
+middleware/
+```
+
+➡️ JWT authentication, security
+
+```
+MongoDB
+```
+
+➡️ Stores data
+
+---
+
+## One correction
+
+You said:
+
+> "Node.js connects frontend to backend to db"
+
+A more accurate statement is:
+
+> **React (frontend) sends requests to the Express backend running on Node.js. Express processes those requests, uses Mongoose to interact with MongoDB, and returns the response back to React.**
+
+That is the standard architecture used in most MERN applications.
+React Page
+= UI aur user interaction
+
+api.js
+= backend ko HTTP request
+
+Route
+= request ko correct controller tak bhejna
+
+Middleware
+= request ko check/protect karna
+
+Controller
+= request process karna
+
+Service
+= external API ya complex logic
+
+Model
+= database structure aur queries
+
+MongoDB
+= actual stored data
+
+
+
+
